@@ -1,0 +1,103 @@
+<div class='panel-body'>
+  <div class='row'>
+    <table class='table table-striped'>
+      <tbody>
+        <tr>
+          <td>Action</td>
+          <td>
+            <table class='table'>
+              <tbody>
+                <tr>
+                  <td>WWCM Content</td>
+                  <td colspan='3'><input type='text' [(ngModel)]='attributes.wwcmContent' class='form-control'></td>
+                </tr>
+                <tr>
+                  <td>Target Url</td>
+                  <td colspan='3'><input type='text' [(ngModel)]='attributes.targetUrl' class='form-control'></td>
+                </tr>
+                <tr>
+                  <td>Open in New Window</td>
+                  <td><input type='checkbox' [(ngModel)]='attributes.openInNewWindow'></td>
+                  <td>Global Nav</td>
+                  <td><input type='checkbox' [(ngModel)]='attributes.globalNav'></td>
+                </tr>
+                <tr>
+                  <td>Require Https</td>
+                  <td><input type='checkbox' [(ngModel)]='attributes.requireHttps'></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Category Display</td>
+          <td>
+            <table class='table'>
+              <tbody>
+                <tr>
+                  <td>Browse by Color</td>
+                  <td><input type='checkbox' [(ngModel)]='attributes.browseByColor'></td>
+                  <td>Show Sort by Options</td>
+                  <td><input type='checkbox' [(ngModel)]='attributes.showSortByOptions'></td>
+                </tr>
+                <tr>
+                  <td>Show in Top Nav</td>
+                  <td><input type='checkbox' [(ngModel)]='attributes.showInTopNav'></td>
+                  <td>Show in Top Nav Drop Down</td>
+                  <td><input type='checkbox' [(ngModel)]='attributes.showInTopNavDrop'></td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Nav Label</td>
+          <td>
+            <table class='table'>
+              <tbody>
+                <tr>
+                  <td>Label CSS Override</td>
+                  <td><input type='text' [(ngModel)]='attributes.labelCssOverride' class='form-control'></td>
+                </tr>
+                <tr>
+                  <td>Label Prefix</td>
+                  <td><input type='text' [(ngModel)]='attributes.labelPrefix' class='form-control'></td>
+                </tr>
+                <tr>
+                  <td>Label Prefix CSS Override</td>
+                  <td><input type='text' [(ngModel)]='attributes.labelPrefixCss' class='form-control'></td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Product Setting</td>
+          <td>
+            <table class='table'>
+              <tbody>
+                <tr>
+                  <td>Safety Stock</td>
+                  <td><input type='text' [(ngModel)]='attributes.safetyStock' class='form-control'></td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+
+
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class='panel-footer'>
+  <div class='col-md-2'>CMS ID: {{attributes.id}}</div>
+  <div class='col-md-2'>WCS ID: {{attributes.id}}</div>
+  <div class='col-md-2'><button class='btn btn-primary'>Save</button></div>
+  <div class='col-md-2'><button class='btn btn-primary'>Cancel</button></div>
+</div>

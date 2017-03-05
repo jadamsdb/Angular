@@ -1,0 +1,23 @@
+<div class='panel panel-primary'>
+    <div class='panel-heading'>
+        {{pageTitle}}
+    </div>
+
+    <div class='panel-body'>
+        <div class='table-responsive'>
+            <div class='col-md-3'><app-tree-view></app-tree-view></div>
+            <div class='col-md-9'>
+                <ul class='nav nav-pills nav-justified'>
+                    <li [ngClass]='getActive(0)' (click)='pageDisplayed = 0'><a>Properties</a></li>
+                    <li [ngClass]='getActive(1)' (click)='pageDisplayed = 1'><a>Attributes</a></li>
+                    <li [ngClass]='getActive(2)' (click)='pageDisplayed = 2'><a>Notes</a></li>
+                    <li [ngClass]='getActive(3)' (click)='pageDisplayed = 3'><a>Products</a></li>
+                </ul>
+                <div *ngIf='pageDisplayed === 0' class='panel panel-body'><app-category-properties></app-category-properties></div>
+                <div *ngIf='pageDisplayed === 1' class='panel panel-body'><app-category-attributes></app-category-attributes></div>
+                <div *ngIf='pageDisplayed === 2' class='panel panel-body'><app-category-notes></app-category-notes></div>
+                <div *ngIf='pageDisplayed === 3' class='panel panel-body'><app-category-products></app-category-products></div>
+            </div>
+        </div>
+    </div>
+</div>

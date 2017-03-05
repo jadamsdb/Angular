@@ -1,0 +1,19 @@
+/*li {
+    font-size: medium;
+}*/
+
+/*div.panel-heading {
+   font-size: x-large; 
+}*/
+
+div.container { padding-top: 10px; }
+
+#environment{
+    text-align: right;
+}
+
+.row{
+    padding-bottom: 3px;
+}
+
+/*div{ border: solid black 1px ;}*/
