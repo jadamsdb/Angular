@@ -1,3 +1,33 @@
-<p>
-  category-products works!
-</p>
+<div class="row">
+    <!--<div class="col-sm-3">-->
+    <div class="row">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="col-sm-6">Products</div>
+                <div class="col-sm-6">
+                  <input type="text" class='form-control'>
+                </div>
+            </div>
+            <div class="panel-body" dnd-sortable-container [sortableData]="products" [dropZones]="['delete-dropZone']">
+                <ul class="list-group">
+                    <li *ngFor='let product of products; let i = index' class='list-group-item' dnd-sortable [sortableIndex]='i'>
+                        {{product.name}}
+                    </li>
+                    <!--<li *ngFor="let product of products; let i = index" class="list-group-item"
+                    dnd-sortable [sortableIndex]="i">{{product.name}}</li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="col-sm-6">-->
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-body" dnd-sortable-container [dropZones]="['delete-dropZone']" [sortableData]="recycled">
+                Recycle bin
+            </div>
+        </div>
+        <div *ngIf="recycled.length">
+        <b>Recycled:</b> <span>{{recycled.name}} </span>
+        </div>
+    </div>
+</div>

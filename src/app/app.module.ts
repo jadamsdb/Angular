@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { TreeModule } from 'angular2-tree-component';
+import { DndModule } from 'ng2-dnd';
 // import { angularBootstrapNavTree } from '../assets/abn_tree_directive';
 // import { MdTabsModule } from 'md-tabs/tabs';
 
@@ -32,6 +33,7 @@ import { CategoryProductsComponent } from './category/category-products.componen
     FormsModule,
     HttpModule,
     TreeModule,
+    DndModule.forRoot(),
     // MdTabsModule,
     RouterModule.forRoot([
       { path: 'login', component: LoginComponent },
